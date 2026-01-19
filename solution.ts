@@ -43,3 +43,16 @@ const filterByRating = (arrOfObj:Item[]) => {
 }
 
 
+interface User {
+    id: number;
+    name: string;
+    email: string;
+    isActive: boolean;
+  }
+  
+  const filterActiveUsers = (input: User[])=>{
+      const filteredUsers = input.filter(user => user.isActive == true)
+      return filteredUsers;
+  }
+  
+
