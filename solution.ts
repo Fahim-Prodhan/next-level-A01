@@ -70,3 +70,8 @@ const printBookDetails = (book:Book) =>{
 }
 
 
+const getUniqueValues = (arr1:number[], arr2:number[]): number[] =>{
+    const arrayWithUniqueValues = [...new Set([...arr1,...arr2])]
+    return arrayWithUniqueValues;
+}
+
