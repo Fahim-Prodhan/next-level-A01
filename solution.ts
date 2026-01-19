@@ -9,3 +9,12 @@ const formatValue = (value:FormateValueType):FormateValueType | undefined =>{
         return !value;
     }
 }
+
+const getLength = (input:string | any[]):number | undefined =>{
+    if(typeof input == 'string'){
+        return input.length
+    }else if(Array.isArray(input)){
+        return input.length;
+    }
+}
+
