@@ -56,3 +56,17 @@ interface User {
   }
   
 
+  interface Book {
+    title : string,
+    author : string,
+    publishedYear : number,
+    isAvailable : boolean
+}
+
+const printBookDetails = (book:Book) =>{
+    const rslt = book.isAvailable ? `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: Yes`: `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: No`
+    
+    console.log(rslt);
+}
+
+
