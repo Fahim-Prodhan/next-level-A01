@@ -50,7 +50,7 @@ interface User {
     isActive: boolean;
   }
   
-  const filterActiveUsers = (input: User[])=>{
+  const filterActiveUsers = (input: User[]): User[]=>{
       const filteredUsers = input.filter(user => user.isActive == true)
       return filteredUsers;
   }
@@ -63,7 +63,7 @@ interface User {
     isAvailable : boolean
 }
 
-const printBookDetails = (book:Book) =>{
+const printBookDetails = (book:Book): void =>{
     const rslt = book.isAvailable ? `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: Yes`: `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: No`
     
     console.log(rslt);
