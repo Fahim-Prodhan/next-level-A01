@@ -75,3 +75,19 @@ const getUniqueValues = (arr1:number[], arr2:number[]): number[] =>{
     return arrayWithUniqueValues;
 }
 
+interface Product {
+    name: string;
+    price: number;
+    quantity:number;
+    discount?:number
+}
+
+const calculateTotalPrice = (products:Product[]): number | undefined =>{
+    const total = products.reduce((sum,item)=>{
+        const discountAmount = item.discount ? (item.discount/100)*item.price: 0
+        return sum + (item.price - discountAmount) * item.quantity
+    }, 0)
+
+    return total
+}
+
